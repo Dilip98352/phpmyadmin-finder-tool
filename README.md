@@ -1,130 +1,104 @@
+Sure! Here's the full content for your `README.md` file based on the polished version I created:
+
+````markdown
 # Advanced phpMyAdmin (PMA) Finder
 
-![Python Version](https://img.shields.io/badge/python-3.6%2B-blue.svg)
+![Python Version](https://img.shields.io/badge/python-3.6%2B-blue.svg)  
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 
-A graphical, multi-threaded scanner written in Python and Tkinter to discover hidden or non-standard phpMyAdmin login panels on a web server. This tool uses a combination of techniques for a comprehensive and efficient search.
+A graphical, multi-threaded scanner written in Python and Tkinter to discover hidden or non-standard phpMyAdmin login panels on web servers. This tool uses a combination of techniques for a comprehensive and efficient search.
 
 ## Features
 
 - Graphical User Interface: Easy-to-use interface built with Tkinter.
-- Multi-Threaded Scanning: The UI remains responsive while the scan runs in the background.
-- Comprehensive Path List: Uses an extensive list of over 40 common and obscure paths for phpMyAdmin.
-- Subdomain Scanning: Option to scan a list of common subdomains (e.g., `db.example.com`, `mysql.example.com`).
-- Port Scanning: Checks multiple common web ports (e.g., 80, 443, 8080, 2083, 10000).
+- Multi-Threaded Scanning: Keeps UI responsive while scanning runs in the background.
+- Comprehensive Path List: Checks over 40 common and obscure phpMyAdmin paths.
+- Subdomain Scanning: Option to scan popular subdomains like `db.example.com` or `mysql.example.com`.
+- Port Scanning: Scans multiple common web ports: 80, 443, 8080, 2083, 10000.
 - Smart Detection:
-  - Content Analysis: Scans page content and titles for keywords specific to phpMyAdmin.
-  - Favicon Hash Check: Verifies the `favicon.ico` MD5 hash against known phpMyAdmin hashes.
-  - Robots.txt Analysis: Checks `robots.txt` for `Disallow` entries that might reveal the panel's location.
-- Real-time Logging: See what the scanner is doing in real-time with colored log output.
-- Cancellable Scans: Stop the scan at any time.
-- Custom User-Agent: Set a custom User-Agent for requests.
+  - Content and Title analysis for phpMyAdmin keywords.
+  - Favicon `favicon.ico` hash checking against known phpMyAdmin hashes.
+  - Robots.txt analysis for `Disallow` entries indicating panel locations.
+- Real-time Logging: Colored log output updates in real time.
+- Cancellable Scans: Stop the scan anytime via UI.
+- Custom User-Agent: Specify a custom User-Agent string for HTTP requests.
 
 ## Screenshot
 
-(The GUI allows you to input a target URL, select scan options, and view live results in the log area.)
+![Screenshot 1](./screenshots/screenshot1.png)
+
+_The GUI lets you input the target URL, select scan options, and view live logs._
 
 ## Requirements
 
-- Python 3.6 or higher
+- Python 3.6+
 - `requests` library
 
 ## Installation & Usage
 
-Follow these steps to get the scanner running:
-
 1. Clone the Repository
 
-```bash
-git clone https://github.com/Dilip98352/phpmyadmin-finder-tool.git
-cd pma-finder
-IGNORE_WHEN_COPYING_START
-content_copy
-download
-Use code with caution.
-Markdown
-IGNORE_WHEN_COPYING_END
+   ```bash
+   git clone https://github.com/Dilip98352/phpmyadmin-finder-tool.git
+   cd phpmyadmin-finder-tool
+   ```
+````
 
-(Replace your-username/pma-finder with the actual repository URL)
+2. Create and Activate Virtual Environment (Recommended)
 
-2. Create and Activate a Virtual Environment (Recommended)
+   On macOS/Linux:
 
-On macOS/Linux:
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate
+   ```
 
-python3 -m venv venv
-source venv/bin/activate
-IGNORE_WHEN_COPYING_START
-content_copy
-download
-Use code with caution.
-Bash
-IGNORE_WHEN_COPYING_END
+   On Windows:
 
-On Windows:
-
-python -m venv venv
-.\venv\Scripts\activate
-IGNORE_WHEN_COPYING_START
-content_copy
-download
-Use code with caution.
-Bash
-IGNORE_WHEN_COPYING_END
+   ```powershell
+   python -m venv venv
+   .\venv\Scripts\activate
+   ```
 
 3. Install Dependencies
 
-Create a file named requirements.txt in the project directory and add the following line:
-
-requests
-IGNORE_WHEN_COPYING_START
-content_copy
-download
-Use code with caution.
-IGNORE_WHEN_COPYING_END
-
-Then, run the following command to install the required library:
-
-pip install -r requirements.txt
-IGNORE_WHEN_COPYING_START
-content_copy
-download
-Use code with caution.
-Bash
-IGNORE_WHEN_COPYING_END
+   ```bash
+   pip install -r requirements.txt
+   ```
 
 4. Run the Application
 
-python pma_finder_app.py
-IGNORE_WHEN_COPYING_START
-content_copy
-download
-Use code with caution.
-Bash
-IGNORE_WHEN_COPYING_END
+   ```bash
+   python3 app.py
+   ```
 
-(Replace pma_finder_app.py with the actual name of your Python script file.)
+## How to Use
 
-5. How to Use the Scanner
+1. Launch the application.
+2. Enter the target URL or domain (e.g., `example.com`).
+3. Choose scan options (subdomains, favicon check, ports, etc.).
+4. Click Start Scan.
+5. Monitor the Scan Log & Results area for live updates.
+6. If a phpMyAdmin panel is detected, you’ll see a success message and pop-up notification.
+7. Click Stop Scan to cancel anytime.
 
-Launch the application.
+## Disclaimer
 
-Enter the base target URL or domain name (e.g., example.com).
+This tool is for educational purposes and authorized penetration testing only. Unauthorized scanning is illegal and unethical. The author is not responsible for misuse or damage caused by this program. Always obtain explicit permission before scanning any websites.
 
-Select your desired scan options (Scan Subdomains, Check Favicon, etc.).
+## License
 
-Click the "Start Scan" button.
+This project is licensed under the [MIT License](LICENSE).
 
-Monitor the "Scan Log & Results" area for real-time updates.
+## Support & Coffee ☕️
 
-If a phpMyAdmin panel is found, a success message will appear in the log and a pop-up will notify you.
+If you find this tool useful, consider buying me a coffee to support development:
 
-You can stop the scan at any time by clicking the "Stop Scan" button.
+[![Buy Me A Coffee](https://img.shields.io/badge/Buy_Me_A_Coffee-FF813F?style=flat&logo=buy-me-a-coffee&logoColor=white)](https://www.buymeacoffee.com/dilip)
 
-Disclaimer
+```
 
-This tool is intended for educational purposes and for use in authorized security testing or penetration testing engagements only. Unauthorized scanning of web applications is illegal. The author is not responsible for any misuse or damage caused by this program. Always obtain permission from the website owner before scanning.
 
-License
 
-This project is licensed under the MIT License. See the LICENSE file for details.
+If you want, I can create the file and save it for you — just let me know!
 ```
