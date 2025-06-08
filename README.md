@@ -95,5 +95,3 @@ This project is licensed under the [MIT License](LICENSE).
 If you find this tool useful, consider buying me a coffee to support development:
 
 [![Buy Me A Coffee](https://img.shields.io/badge/Buy_Me_A_Coffee-FF813F?style=flat&logo=buy-me-a-coffee&logoColor=white)](https://www.buymeacoffee.com/dilip)
-
-```
