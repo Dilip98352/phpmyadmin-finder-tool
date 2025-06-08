@@ -97,8 +97,3 @@ If you find this tool useful, consider buying me a coffee to support development
 [![Buy Me A Coffee](https://img.shields.io/badge/Buy_Me_A_Coffee-FF813F?style=flat&logo=buy-me-a-coffee&logoColor=white)](https://www.buymeacoffee.com/dilip)
 
 ```
-
-
-
-If you want, I can create the file and save it for you — just let me know!
-```
